@@ -1,0 +1,26 @@
+# Virtual environments
+xai/
+venv/
+.venv/
+env/
+
+xai/
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+.ipynb_checkpoints
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
