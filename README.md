@@ -1,234 +1,251 @@
 <div align="center">
 
-# XAI-Powered Heart Disease Prediction System  
-### Clinical Decision Support with Explainable Artificial Intelligence
+<h1>XAI-Powered Heart Disease Prediction System</h1>
+<h3>Clinical Decision Support with Explainable Artificial Intelligence</h3>
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io)
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
-[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange.svg)](https://scikit-learn.org/)
-[![SHAP](https://img.shields.io/badge/Explainability-SHAP-red.svg)](https://shap.readthedocs.io/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+<p>
+  <img src="https://img.shields.io/github/stars/kartikpagariya25/XAI-Heart-Disease-Prediction?style=social" />
+  <img src="https://img.shields.io/github/forks/kartikpagariya25/XAI-Heart-Disease-Prediction?style=social" />
+</p>
 
-A clinically interpretable machine learning system for heart disease prediction with explainable AI using SHAP.
+<p>
+  <img src="https://img.shields.io/badge/Python-3.9+-blue.svg" />
+  <img src="https://img.shields.io/badge/Framework-Streamlit-red.svg" />
+  <img src="https://img.shields.io/badge/Model-Logistic%20Regression-orange.svg" />
+  <img src="https://img.shields.io/badge/Explainability-SHAP-critical.svg" />
+  <img src="https://img.shields.io/badge/ML-Scikit--Learn-yellow.svg" />
+  <img src="https://img.shields.io/badge/Deployment-GitHub-black.svg" />
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" />
+</p>
+
+<p>
+  <img src="https://img.shields.io/github/last-commit/kartikpagariya25/XAI-Heart-Disease-Prediction" />
+  <img src="https://img.shields.io/github/issues/kartikpagariya25/XAI-Heart-Disease-Prediction" />
+  <img src="https://img.shields.io/github/languages/top/kartikpagariya25/XAI-Heart-Disease-Prediction" />
+</p>
+
+<p>
+A clinically interpretable machine learning system for heart disease prediction
+with transparent AI explanations using SHAP.
+</p>
 
 </div>
 
----
+<hr/>
 
-## 1. Project Overview
+<h2>1. Project Overview</h2>
 
-This project implements an Explainable AI (XAI) based heart disease prediction system designed for clinical decision support. The system predicts heart disease risk using Logistic Regression and provides interpretable explanations using SHAP (SHapley Additive exPlanations).
+<p>
+This project implements an Explainable AI (XAI) powered heart disease prediction system 
+designed for clinical decision support. The system uses Logistic Regression for prediction 
+and SHAP (SHapley Additive exPlanations) to generate interpretable explanations for each case.
+</p>
 
-The goal is not only high predictive performance but also transparency, stability, and clinical trust.
+<p>
+The primary objective is to balance predictive performance with explanation stability 
+and clinical interpretability.
+</p>
 
----
+<hr/>
 
-## 2. Core Objectives
+<h2>2. Core Objectives</h2>
 
-1. Build a reliable heart disease prediction model  
-2. Provide transparent explanations for each prediction  
-3. Validate explanation faithfulness and stability  
-4. Deliver a clean, user-friendly clinical interface  
-5. Enable medical interpretability rather than black-box output  
+<ol>
+  <li>Develop a reliable heart disease risk prediction model</li>
+  <li>Provide transparent and faithful AI explanations</li>
+  <li>Validate explanation stability across similar cases</li>
+  <li>Deliver a professional web interface for clinicians</li>
+  <li>Ensure structured version control and deployment</li>
+</ol>
 
----
+<hr/>
 
-## 3. Why Logistic Regression?
+<h2>3. Model Selection Justification</h2>
 
-Although tree-based models were evaluated, Logistic Regression was selected because:
+<table>
+<tr>
+<th>Criterion</th>
+<th>Logistic Regression</th>
+<th>Random Forest</th>
+</tr>
+<tr>
+<td>Cross-Validated ROC-AUC</td>
+<td>Comparable</td>
+<td>Comparable</td>
+</tr>
+<tr>
+<td>Overfitting</td>
+<td>Low</td>
+<td>High (Training AUC = 1.0)</td>
+</tr>
+<tr>
+<td>Faithfulness</td>
+<td>Strong</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Stability</td>
+<td>High (~0.71)</td>
+<td>Very Low (~0.20)</td>
+</tr>
+<tr>
+<td>Interpretability</td>
+<td>Intrinsic</td>
+<td>Post-hoc</td>
+</tr>
+</table>
 
-| Criterion | Logistic Regression | Random Forest |
-|------------|-------------------|---------------|
-| Cross-Validated ROC-AUC | Comparable | Comparable |
-| Overfitting | Low | High (AUC = 1.0 training) |
-| Faithfulness | Strong | Moderate |
-| Stability | High (~0.71) | Very Low (~0.20) |
-| Interpretability | Intrinsic | Post-hoc |
+<p>
+Logistic Regression was selected due to superior explanation stability and intrinsic interpretability,
+which are critical for medical AI systems.
+</p>
 
-For medical AI systems, stability and interpretability are more critical than marginal accuracy gains.
+<hr/>
 
----
+<h2>4. System Architecture</h2>
 
-## 4. System Architecture
-
-
+<pre>
 User Input (Streamlit UI)
-↓
+        ↓
 Data Preprocessing (Scaler)
-↓
+        ↓
 Logistic Regression Model
-↓
+        ↓
 Probability Output
-↓
+        ↓
 SHAP Explainability Engine
-↓
+        ↓
 Clinical Interpretation Layer
+</pre>
 
+<hr/>
 
----
+<h2>5. Key Features</h2>
 
-## 5. Features
+<ul>
+  <li>Binary heart disease prediction (High / Low Risk)</li>
+  <li>Probability-based risk scoring</li>
+  <li>SHAP waterfall visualizations</li>
+  <li>Personalized clinical explanation</li>
+  <li>Faithfulness and stability validation</li>
+  <li>Git LFS model management</li>
+  <li>Professional Streamlit interface</li>
+</ul>
 
-1. Binary heart disease prediction (High / Low Risk)
-2. Probability score output
-3. SHAP waterfall visualization
-4. Personalized clinical explanation
-5. Risk stratification (Low / Moderate / High)
-6. Faithfulness validation
-7. Stability validation
-8. Clean Streamlit interface
-9. GitHub-based version control
-10. Deployable architecture
+<hr/>
 
----
+<h2>6. Technology Stack</h2>
 
-## 6. Technology Stack
+<ul>
+  <li><b>Backend:</b> Python, Scikit-learn, SHAP, Pandas, NumPy</li>
+  <li><b>Frontend:</b> Streamlit</li>
+  <li><b>Deployment:</b> GitHub + Git LFS</li>
+</ul>
 
-Backend:
-- Python 3.9+
-- Scikit-learn
-- SHAP
-- NumPy
-- Pandas
+<hr/>
 
-Frontend:
-- Streamlit
+<h2>7. Installation</h2>
 
-Deployment:
-- GitHub
-- Git LFS (for model files)
-- Streamlit Cloud (optional)
-
----
-
-## 7. Project Structure
-
-
-XAI-Heart-Disease-Prediction/
-├── app.py
-├── requirements.txt
-├── README.md
-├── PROJECT_DOCUMENTATION.md
-├── data/
-│ └── raw/
-├── models/
-│ ├── logistic_model.pkl
-│ ├── scaler.pkl
-│ ├── metadata.pkl
-│ └── shap_explainer.pkl
-├── notebooks/
-│ └── 01_eda_clean.ipynb
-└── .gitignore
-
-
----
-
-## 8. Installation Guide
-
-### Step 1: Clone the repository
-
-```bash
+<pre>
 git clone https://github.com/kartikpagariya25/XAI-Heart-Disease-Prediction.git
 cd XAI-Heart-Disease-Prediction
-Step 2: Create virtual environment (recommended)
-
-Windows:
-
 python -m venv venv
 venv\Scripts\activate
-
-Linux / Mac:
-
-python -m venv venv
-source venv/bin/activate
-Step 3: Install dependencies
 pip install -r requirements.txt
-Step 4: Run the application
 streamlit run app.py
+</pre>
 
-Application will be available at:
+Application runs at: <b>http://localhost:8501</b>
 
-http://localhost:8501
-9. Usage Workflow
+<hr/>
 
-Enter patient clinical parameters in sidebar
+<h2>8. Risk Stratification</h2>
 
-Click "Predict Risk"
+<ul>
+  <li><b>Low Risk:</b> Probability &lt; 0.40</li>
+  <li><b>Moderate Risk:</b> 0.40 – 0.70</li>
+  <li><b>High Risk:</b> &gt; 0.70</li>
+</ul>
 
-View:
+<hr/>
 
-Probability score
+<h2>9. Explainable AI Validation</h2>
 
-Risk category
+<ul>
+  <li><b>Faithfulness:</b> Removing top features caused ~0.07 ROC-AUC drop</li>
+  <li><b>Stability:</b> Logistic model achieved ~0.71 cosine similarity</li>
+  <li><b>Clinical Alignment:</b> SHAP explanations aligned with known medical risk factors</li>
+</ul>
 
-SHAP waterfall chart
+<hr/>
 
-Professional clinical interpretation
+<h2>10. Team & GitHub Profiles</h2>
 
-Risk categories:
+<table>
+<tr>
+<th>Member</th>
+<th>Role</th>
+<th>GitHub Profile</th>
+</tr>
 
-Low Risk: Probability < 0.40
+<tr>
+<td>Kartik</td>
+<td>ML & Explainability Lead</td>
+<td>
+<a href="https://github.com/kartikpagariya25">
+<img src="https://img.shields.io/badge/GitHub-kartikpagariya25-black?logo=github" />
+</a>
+</td>
+</tr>
 
-Moderate Risk: 0.40–0.70
+<tr>
+<td>Aditya</td>
+<td>UI/UX Engineer</td>
+<td>
+<a href="https://github.com/DevXDividends">
+<img src="https://img.shields.io/badge/GitHub-DevXDividends-black?logo=github" />
+</a>
+</td>
+</tr>
 
-High Risk: > 0.70
+<tr>
+<td>Vikrant</td>
+<td>DevOps & Deployment</td>
+<td>
+<a href="https://github.com/VikrantKadam028">
+<img src="https://img.shields.io/badge/GitHub-VikrantKadam028-black?logo=github" />
+</a>
+</td>
+</tr>
 
-10. Explainable AI Implementation
-Local Explanations
+<tr>
+<td>Pranali</td>
+<td>Research Documentation</td>
+<td>-</td>
+</tr>
 
-SHAP waterfall plots
+<tr>
+<td>Janhavi</td>
+<td>Testing & Validation</td>
+<td>-</td>
+</tr>
 
-Feature contribution ranking
+</table>
 
-Clinical narrative explanation
+<hr/>
 
-Global Evaluation
+<h2>11. Future Scope</h2>
 
-Cross-validation
+<ol>
+  <li>Integration of additional XAI methods (LIME, Integrated Gradients)</li>
+  <li>Neural network-based comparative analysis</li>
+  <li>Downloadable PDF clinical reports</li>
+  <li>EHR system integration</li>
+  <li>Production monitoring dashboard</li>
+</ol>
 
-Faithfulness testing (feature removal impact)
-
-Stability testing (cosine similarity of SHAP vectors)
-
-11. Validation Metrics
-
-Faithfulness:
-Removal of top 3 features caused significant ROC-AUC drop (~0.07).
-
-Stability:
-Logistic Regression achieved moderate-to-strong stability (~0.71).
-
-These metrics confirm explanation reliability.
-
-12. Team Contributions
-Member	Role
-Kartik	ML & Explainability Lead
-Aditya	UI/UX Engineer
-Vikrant	DevOps & Deployment
-Pranali	Research Documentation
-Janhavi	Testing & Validation
-13. Future Improvements
-
-Integrate LIME for comparative XAI analysis
-
-Add neural network models
-
-Add downloadable PDF medical report
-
-Integrate EHR compatibility
-
-Add deployment monitoring
-
-14. Dataset
-
-Heart Disease Dataset – UCI Machine Learning Repository
-
-15. License
-
-MIT License
+<hr/>
 
 <div align="center">
-
-Built as an academic Explainable AI system for clinical decision support.
-
-</div> ```
+<b>Built as an academic Explainable AI system for clinical decision support.</b>
+</div>
